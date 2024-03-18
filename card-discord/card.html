@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css-rs.css" />
+    <link rel="stylesheet" href="./app.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Discord Card Yuki Dev</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="discord--card__border">
+        <div class="inner">
+          <div class="inner--contents__video">
+            <img src="../images/minimalist-forest-river-art-1-4k.jpg" alt="" />
+          </div>
+          <!-- end  -->
+          <div class="avatar">
+            <img src="../images/F-UilQLawAAX-VT.jpg" alt="" />
+          </div>
+          \
+          <!-- end  -->
+          <div class="status">
+            <img src="./svg/online.svg" alt="" />
+          </div>
+          <!-- end -->
+          <div class="badges">
+            <img src="./svg/early-verified-bot-developer.svg" alt="" />
+            <img src="./svg/boost-24-month.svg" alt="" />
+            <img src="./svg/discord-certified-moderator-old.svg" alt="" />
+            <img src="./svg/hypesquad-event.svg" alt="" />
+            <img src="./svg/legacy-username.svg" alt="" />
+            <img src="./svg/nitro.svg" alt="" />
+          </div>
+          <!-- end  -->
+          <div class="aboutme">
+            <!-- title  -->
+            <div class="aboutme--ctn">
+              <div class="title">
+                <h1>YukiDev</h1>
+                <h2>YukiDev2806</h2>
+                <h2>❤️T09TK0204❤️</h2>
+              </div>
+              <!-- end title  -->
+              <div class="introducation">
+                <h1>ABOUT ME</h1>
+                <h2>FullStack Developer✅</h2>
+                <h2>Status</h2>
+                <li>Yuki Đang code</li>
+                <li>Yuki Đang Fix Bug</li>
+                <li>Yuki Đang Trầm Cảm</li>
+              </div>
+              <!-- end introducation -->
+              <div class="doing">
+                <h1>Đang trong trạng thái Simp mode bạn Bơ</h1>
+              </div>
+              <!-- end doing  -->
+              <div class="role">
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Vozer</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Fullstack Developer</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Wibu</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Freelancer</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Freelancer</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Freelancer</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Freelancer</h1>
+                </div>
+                <div class="boxed">
+                  <div class="cir"></div>
+                  <h1>Freelancer</h1>
+                </div>
+              </div>
+              <!-- end role  -->
+              <div class="contactme">
+                <h1>Contact Me</h1>
+                <div class="contactme--ctn">
+                  <a
+                    class="contact--item"
+                    href="https://www.facebook.com/yukicute1009"
+                    target="_blank "
+                  >
+                    <ion-icon id="fb" name="logo-facebook"></ion-icon>
+                    <span>Facebook</span>
+                    <ion-icon name="link-outline"></ion-icon>
+                  </a>
+                  <a class="contact--item" href="mailto:ogyminecraft497@gmail.com" target="_parent">
+                    <ion-icon id="mail" name="mail-unread-outline"></ion-icon>
+                    <span>Email</span>
+                    <ion-icon name="link-outline"></ion-icon>
+                  </a>
+                  <a
+                    class="contact--item"
+                    href="https://github.com/Thienan1092005"
+                    target="_parent "
+                  >
+                    <ion-icon id="github" name="logo-github"></ion-icon>
+                    <span>GitHub</span>
+                    <ion-icon name="link-outline"></ion-icon>
+                  </a>
+                  <a
+                    class="contact--item"
+                    href="https://discord.com/users/654675180529909789"
+                    target="_parent "
+                  >
+                    <ion-icon id="discrod" name="logo-discord"></ion-icon>
+                    <span>Discord</span>
+                    <ion-icon name="link-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
+              <!-- end contactme -->
+            </div>
+          </div>
+          <!-- end aboutme  -->
+        </div>
+        <!-- end inner  -->
+      </div>
+    </div>
+    <script>
+      const roleCode = document.querySelectorAll(".cir");
+      for (let i = 0; i < roleCode.length; i++) {
+        const indexNum = i % 4;
+        roleCode[i].classList.add(`active${indexNum}`);
+      }
+    </script>
+  </body>
+</html>

@@ -83,3 +83,5 @@ function vayVon() {
 }
 vayVon(taiSanCuaQuynh);
 //enđing//
+
+const roleCode = document.querySelectorAll("cir");
