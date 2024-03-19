@@ -68,7 +68,7 @@ html body {
   overflow: hidden;
   background-color: white;
   position: absolute;
-  border: 8px solid white;
+  border: 10px solid white;
 }
 .inner .avatar img {
   width: 100%;
@@ -82,7 +82,7 @@ html body {
   left: 150px;
   transform: translate(-155%, 140%);
   position: absolute;
-  top: 25%;
+  top: 25.5%;
   overflow: hidden;
 }
 .status img {

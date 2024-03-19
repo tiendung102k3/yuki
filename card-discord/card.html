@@ -22,16 +22,12 @@
           </div>
           <!-- end  -->
           <div class="avatar">
-            <!-- <img src="../images/F-UilQLawAAX-VT.jpg" alt="" /> -->
-            <img
-              src="https://cdn.discordapp.com/avatars/741521507947118613/b646e290ea39f6126c55099837f86ee0?size=1024"
-              alt=""
-            />
+            <img src="../images/F-UilQLawAAX-VT.jpg" alt="" />
           </div>
           \
           <!-- end  -->
           <div class="status">
-            <img src="./svg/online.svg" alt="" />
+            <img id="statusimg" src="./svg/online.svg" alt="" />
           </div>
           <!-- end -->
           <div class="badges">
@@ -148,20 +144,10 @@
     </div>
     <audio
       autoplay
+      loop
       class="audio"
       src="../audio/y2mate.com - Có Hẹn Với Thanh Xuân  MonstarCukak Remix Audio Lyrics Video.mp3"
     ></audio>
-    <script>
-      const roleCode = document.querySelectorAll(".cir");
-      const audio = document.querySelector(".audio");
-      for (let i = 0; i < roleCode.length; i++) {
-        const indexNum = i % 4;
-        roleCode[i].classList.add(`active${indexNum}`);
-        console.log(`active${indexNum}`);
-      }
-      if (audio.volume > 0) {
-        audio.volume -= 0.7;
-      }
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
