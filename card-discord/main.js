@@ -8,17 +8,15 @@ for (let i = 0; i < roleCode.length; i++) {
 }
 
 //  lay trang thai  hoat dong discord
-
-let userData = null; // Biến toàn cục để lưu trữ dữ liệu từ API
-
-// Hàm để lấy dữ liệu từ API và cập nhật biến toàn cục
+const proflieId = "654675180529909789"; // dán proflieid của bạn  vô đây nha //
+let userData = null;
 async function fetchData() {
   try {
-    const response = await fetch("https://api.lanyard.rest/v1/users/654675180529909789");
+    const response = await fetch(`https://api.lanyard.rest/v1/users/${proflieId}`);
     const data = await response.json();
-    userData = data; // Cập nhật biến toàn cục với dữ liệu mới
+    userData = data;
     console.log("Dữ liệu đã được cập nhật:", userData);
-    updateStatus(); // Gọi hàm updateStatus sau khi cập nhật dữ liệu thành công
+    updateStatus();
     getAvtUser();
   } catch (error) {
     console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
