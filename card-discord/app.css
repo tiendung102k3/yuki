@@ -62,11 +62,12 @@ html body {
   position: absolute;
   border: 8px solid white;
 }
-.inner .avater img {
+.inner .avatar img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 .status {
   width: 30px;
   height: 30px;
@@ -307,7 +308,7 @@ html body {
   }
   .badges {
     height: 20px;
-    top: 26%;
+    top: 27%;
     left: 110px;
   }
   .title {
@@ -326,5 +327,56 @@ html body {
   }
   .contact--item ion-icon {
     font-size: 20px;
+  }
+}
+@media (max-height: 915px) {
+  .discord--card__border {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutme {
+    top: 35%;
+    height: auto;
+  }
+  .contactme {
+    bottom: 35px;
+  }
+  .contact--item {
+    height: 35px;
+  }
+  * {
+    font-size: 15px;
+  }
+  .inner .avatar {
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+  }
+  .status {
+    width: 20px;
+    height: 20px;
+    transform: translate(-250%, 170%);
+  }
+  .badges {
+    height: 30px;
+    top: 29%;
+    left: 150px;
+  }
+  .title {
+    top: -10px;
+  }
+  .introducation {
+    top: 0px;
+  }
+  .doing {
+    position: relative;
+    top: 30px;
+  }
+  .role {
+    position: relative;
+    top: 35px;
+  }
+  .contact--item ion-icon {
+    font-size: 25px;
   }
 }
