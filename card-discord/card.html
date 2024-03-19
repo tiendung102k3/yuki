@@ -18,7 +18,7 @@
       <div class="discord--card__border">
         <div class="inner">
           <div class="inner--contents__video">
-            <img src="../images/minimalist-forest-river-art-1-4k.jpg" alt="" />
+            <!-- <img src="../images/minimalist-forest-river-art-1-4k.jpg" alt="" /> -->
           </div>
           <!-- end  -->
           <div class="avatar">
@@ -48,6 +48,7 @@
             <div class="aboutme--ctn">
               <div class="title">
                 <h1>YukiDev</h1>
+                <img class="verify" src="./svg/icons8-blue-tick.svg" alt="" />
                 <h2>YukiDev2806</h2>
                 <h2>❤️T09TK0204❤️</h2>
               </div>
@@ -62,7 +63,7 @@
               </div>
               <!-- end introducation -->
               <div class="doing">
-                <h1>Đang trong trạng thái Simp mode bạn Quỳnh</h1>
+                <h1>💕Đang trong trạng thái Simp mode bạn Quỳnh cute 💕</h1>
               </div>
               <!-- end doing  -->
               <div class="role">
@@ -145,12 +146,21 @@
         <!-- end inner  -->
       </div>
     </div>
+    <audio
+      autoplay
+      class="audio"
+      src="../audio/y2mate.com - Có Hẹn Với Thanh Xuân  MonstarCukak Remix Audio Lyrics Video.mp3"
+    ></audio>
     <script>
       const roleCode = document.querySelectorAll(".cir");
+      const audio = document.querySelector(".audio");
       for (let i = 0; i < roleCode.length; i++) {
         const indexNum = i % 4;
         roleCode[i].classList.add(`active${indexNum}`);
         console.log(`active${indexNum}`);
+      }
+      if (audio.volume > 0) {
+        audio.volume -= 0.7;
       }
     </script>
   </body>
