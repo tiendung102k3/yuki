@@ -5,10 +5,15 @@ html body {
   background-image: url(../images/minimalist-forest-river-art-1-4k.jpg);
   background-size: cover;
   font-family: "Madimi One";
+  color: var(--theme-text);
 }
 :root {
   --pastel-gradient: linear-gradient(to top, #fdbccf, #d3c0f9);
+  /* --pastel-gradient: transparent; */
   --pastel-gradient-outline: linear-gradient(to top, #fff, #d3c0f9);
+  /* --pastel-gradient-outline: transparent; */
+  --theme-text: black;
+  /* --theme-text: white; */
   --box-1: #ff0000;
   --box-2: #9ae8bc;
   --box-3: #d2afdd;
@@ -105,8 +110,8 @@ html body {
 .aboutme {
   position: absolute;
   height: 62%;
-  background-color: beige;
-  overflow-y: auto;
+  background-color: pink;
+  overflow: hidden;
   width: 98%;
   bottom: 15px;
   left: 50%;
@@ -193,6 +198,7 @@ html body {
   position: absolute;
   width: 100%;
   bottom: 60px;
+  color: var(--theme-text);
 }
 .contactme h1 {
   padding-top: 2px;
@@ -216,13 +222,12 @@ html body {
   height: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 10px;
+  color: var(--theme-text);
 }
 .contact--item ion-icon {
   font-size: 30px;
 }
-.contact--item span {
-  color: black;
-}
+
 #fb {
   color: blue;
 }
@@ -248,10 +253,12 @@ html body {
   .discord--card__border {
     width: 100%;
     height: 100%;
+    overflow: auto;
   }
   .aboutme {
     top: 33%;
     height: auto;
+    overflow: auto;
   }
   .contactme {
     bottom: 20px;
@@ -281,10 +288,12 @@ html body {
 @media (max-width: 666px) {
   .discord--card__border {
     width: 100%;
+    overflow: auto;
   }
   .aboutme {
     top: 32%;
     height: auto;
+    overflow: auto;
   }
   .contactme {
     bottom: 20px;
