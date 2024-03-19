@@ -6,10 +6,9 @@ for (let i = 0; i < roleCode.length; i++) {
   roleCode[i].classList.add(`active${indexNum}`);
   console.log(`active${indexNum}`);
 }
-if (audio.volume > 0) {
-  audio.volume -= 0.7;
-}
+
 //  lay trang thai  hoat dong discord
+
 let userData = null; // Biến toàn cục để lưu trữ dữ liệu từ API
 
 // Hàm để lấy dữ liệu từ API và cập nhật biến toàn cục
@@ -20,6 +19,7 @@ async function fetchData() {
     userData = data; // Cập nhật biến toàn cục với dữ liệu mới
     console.log("Dữ liệu đã được cập nhật:", userData);
     updateStatus(); // Gọi hàm updateStatus sau khi cập nhật dữ liệu thành công
+    getAvtUser();
   } catch (error) {
     console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
   }
@@ -31,11 +31,16 @@ function updateStatus() {
   console.log(userData.data.discord_status);
   if (userData.data.discord_status == "offline") {
     statusElement.setAttribute("src", "./svg/offline.svg");
-  } else {
-    statusElement.setAttribute("src", "./svg/online.svg");
   }
 }
-
+// ham lay avt tu user
+function getAvtUser() {
+  const userAvt = document.querySelector("#userAvt");
+  userAvt.setAttribute(
+    "src",
+    `https://cdn.discordapp.com/avatars/${userData.data.discord_user.id}/${userData.data.discord_user.avatar}?size=1024`
+  );
+}
 // Hàm để cập nhật dữ liệu mỗi 3 giây
 setInterval(fetchData, 3000);
 
