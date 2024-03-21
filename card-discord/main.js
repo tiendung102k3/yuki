@@ -99,46 +99,12 @@ function updateStatus() {
   if (userData.data.active_on_discord_mobile == true) {
     console.log("on mobile");
     statusElement.setAttribute("src", statusList.mobile[userData.data.discord_status]);
-    // switch (userData.data.discord_status) {
-    //   case "offline":
-    //     statusElement.setAttribute("src", "./svg/offline-mobile.svg");
-    //     break;
-    //   case "online":
-    //     statusElement.setAttribute("src", "./svg/online-mobile.svg");
-    //     break;
-    //   case "idle":
-    //     statusElement.setAttribute("src", "./svg/idle-mobile.svg");
-    //     break;
-    //   case "dnd":
-    //     statusElement.setAttribute("src", "./svg/dnd-mobile.svg");
-    //     break;
-    //   default:
-    //     console.log("Not in any case for mobile");
-    //     break;
-    // }
   } else if (
     userData.data.active_on_discord_desktop == true ||
     userData.data.active_on_discord_mobile == true
   ) {
     console.log("on pc");
     statusElement.setAttribute("src", statusList.desktop[userData.data.discord_status]);
-    // switch (userData.data.discord_status) {
-    //   case "offline":
-    //     statusElement.setAttribute("src", "./svg/offline.svg");
-    //     break;
-    //   case "online":
-    //     statusElement.setAttribute("src", "./svg/online.svg");
-    //     break;
-    //   case "idle":
-    //     statusElement.setAttribute("src", "./svg/idle.svg");
-    //     break;
-    //   case "dnd":
-    //     statusElement.setAttribute("src", "./svg/dnd.svg");
-    //     break;
-    //   default:
-    //     console.log("Not in any case for desktop/web");
-    //     break;
-    // }
   } else {
     console.log("on invisible");
     statusElement.setAttribute("src", "./svg/offline.svg");
