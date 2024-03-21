@@ -47,7 +47,7 @@ function updateStatus() {
     }
   } else if (
     userData.data.active_on_discord_desktop == true ||
-    userData.data.active_on_discord_web == true
+    userData.data.active_on_discord_mobile == true
   ) {
     console.log("on pc");
     switch (userData.data.discord_status) {
