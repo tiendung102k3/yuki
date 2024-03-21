@@ -83,7 +83,9 @@ html body {
   transform: translate(-155%, 140%);
   position: absolute;
   top: 25.5%;
+  background-color: white;
   overflow: hidden;
+  border-radius: 100rem;
 }
 .status img {
   width: 100%;
@@ -162,6 +164,7 @@ html body {
   padding-top: 15px;
   font-family: "Public Sans", sans-serif;
   font-weight: 800;
+  line-height: 20px;
 }
 .role {
   padding-top: 15px;

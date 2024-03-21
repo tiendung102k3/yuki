@@ -26,8 +26,49 @@ async function fetchData() {
 // Hàm để cập nhật trạng thái dựa trên dữ liệu mới
 function updateStatus() {
   const statusElement = document.querySelector("#statusimg");
-  console.log(userData.data.discord_status);
-  if (userData.data.discord_status == "offline") {
+  if (userData.data.active_on_discord_mobile === true) {
+    console.log("on mobile");
+    switch (userData.data.discord_status) {
+      case "offline":
+        statusElement.setAttribute("src", "./svg/offline-mobile.svg");
+        break;
+      case "online":
+        statusElement.setAttribute("src", "./svg/online-mobile.svg");
+        break;
+      case "idle":
+        statusElement.setAttribute("src", "./svg/idle-mobile.svg");
+        break;
+      case "dnd":
+        statusElement.setAttribute("src", "./svg/dnd-mobile.svg");
+        break;
+      default:
+        console.log("Not in any case for mobile");
+        break;
+    }
+  } else if (
+    userData.data.active_on_discord_desktop === true ||
+    userData.data.active_on_discord_web === true
+  ) {
+    console.log("on pc");
+    switch (userData.data.discord_status) {
+      case "offline":
+        statusElement.setAttribute("src", "./svg/offline.svg");
+        break;
+      case "online":
+        statusElement.setAttribute("src", "./svg/online.svg");
+        break;
+      case "idle":
+        statusElement.setAttribute("src", "./svg/idle.svg");
+        break;
+      case "dnd":
+        statusElement.setAttribute("src", "./svg/dnd.svg");
+        break;
+      default:
+        console.log("Not in any case for desktop/web");
+        break;
+    }
+  } else {
+    console.log("on invisible");
     statusElement.setAttribute("src", "./svg/offline.svg");
   }
 }
@@ -43,4 +84,4 @@ function getAvtUser() {
 setInterval(fetchData, 3000);
 
 // Gọi fetchData khi tải trang lần đầu tiên
-window.onload = fetchData;
+window.onload = fetchData();
