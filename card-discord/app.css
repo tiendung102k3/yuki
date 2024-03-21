@@ -27,21 +27,21 @@ html body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
 }
 
 .discord--card__border {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 610px;
-  height: 914px;
+  height: 1200px;
   background-image: var(--pastel-gradient-outline);
   /* boder control  */
   border-radius: 10px;
 }
 .discord--card__border .inner {
-  position: absolute;
+  position: relative;
   border-radius: 10px;
   width: 97%;
   height: 97%;
@@ -51,7 +51,7 @@ html body {
   background-image: var(--pastel-gradient);
 }
 .inner--contents__video {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 25%;
   background-color: #f094c8;
@@ -67,7 +67,7 @@ html body {
   transform: translate(5%, -50%);
   overflow: hidden;
   background-color: white;
-  position: absolute;
+  position: a;
   border: 10px solid white;
 }
 .inner .avatar img {
@@ -258,6 +258,33 @@ html body {
   background-color: rgb(255, 0, 128);
   color: white;
   transition: linear, 0.5s;
+}
+.playagems {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 90px;
+}
+.gamectn {
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 20px;
+}
+.gamesimg {
+  width: 60px;
+  height: 60px;
+}
+.decripton {
+  padding-left: 25px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 @media (max-width: 767px) {
   .discord--card__border {

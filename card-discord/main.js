@@ -6,7 +6,7 @@ for (let i = 0; i < roleCode.length; i++) {
   console.log(`active${indexNum}`);
 }
 
-const proflieId = "854959889322213406"; // dán proflieid của bạn  vô đây nha //
+const proflieId = "738748102311280681"; // dán proflieid của bạn  vô đây nha //
 let userData = null;
 async function fetchData() {
   try {
@@ -21,11 +21,31 @@ async function fetchData() {
     console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
   }
 }
-
+//hàm get custom caption từ API //
 function getCaption() {
   const captionElement = document.querySelector("#caption");
-  captionElement.innerHTML = ` ${userData.data.activities[0].emoji.name} ${userData.data.activities[0].state}`;
+  if (userData && userData.data && userData.data.spotify == null) {
+    if (
+      userData &&
+      userData.data &&
+      userData.data.activities &&
+      userData.data.activities.length > 0
+    ) {
+      const activity = userData.data.activities[0]; //lấy mảng activities
+      let customIcon = ""; // Khởi tạo biến customIcon rỗng
+      if (activity.emoji && activity.emoji.name) {
+        // Kiểm tra xem trường "name" trong đối tượng "emoji" có tồn tại hay không
+        customIcon = activity.emoji.name; // Gán giá trị cho biến customIcon nếu trường "name" tồn tại
+      }
+      captionElement.innerHTML = `${customIcon} ${activity.state}`;
+    } else {
+      captionElement.innerHTML = "";
+    }
+  } else {
+    captionElement.innerHTML = "dang nghe spotify";
+  }
 }
+
 function updateStatus() {
   const statusElement = document.querySelector("#statusimg");
   if (userData.data.active_on_discord_mobile == true) {
