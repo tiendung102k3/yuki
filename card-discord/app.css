@@ -292,7 +292,7 @@ html body {
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 280px;
+  right: 200px;
   top: 20px;
 }
 @media (max-width: 767px) {
