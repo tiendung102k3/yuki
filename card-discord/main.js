@@ -6,9 +6,9 @@ for (let i = 0; i < roleCode.length; i++) {
   roleCode[i].classList.add(`active${indexNum}`);
   console.log(`active${indexNum}`);
 }
-//thingkibng  cònig
+//thingkibng  config
 const thingKing = document.querySelector(".youThingKing");
-thingKing.innerHTML = "Đang bị bệnh Simp bạn Quỳnh";
+thingKing.innerHTML = "Xin chào mình là Yuki SE tại VNG ";
 // discord sync
 const proflieId = "654675180529909789"; // dán proflieid của bạn  vô đây nha //
 let userData = null;
