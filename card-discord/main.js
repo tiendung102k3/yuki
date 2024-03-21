@@ -79,7 +79,7 @@ function getCaption() {
     }
   }
 }
-
+//hàm get trạng thái on/off của tài khoản
 function updateStatus() {
   const statusElement = document.querySelector("#statusimg");
   const statusList = {
@@ -110,7 +110,6 @@ function updateStatus() {
     statusElement.setAttribute("src", "./svg/offline.svg");
   }
 }
-
 function getAvtUser() {
   const userAvt = document.querySelector("#userAvt");
   userAvt.setAttribute(
