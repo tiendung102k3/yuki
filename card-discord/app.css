@@ -35,7 +35,7 @@ html body {
   left: 50%;
   transform: translateX(-50%);
   width: 610px;
-  height: 1200px;
+  height: 1150px;
   background-image: var(--pastel-gradient-outline);
   /* boder control  */
   border-radius: 10px;
@@ -277,8 +277,8 @@ html body {
   line-height: 20px;
 }
 .gamesimg {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
 .decripton {
   padding-left: 25px;
@@ -288,11 +288,26 @@ html body {
   justify-content: flex-start;
   flex-direction: column;
 }
+.logo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 280px;
+  top: 20px;
+}
 @media (max-width: 767px) {
+  .playagames {
+    position: relative;
+    top: 0px;
+  }
   .discord--card__border {
     width: 100%;
     height: 100%;
     overflow: auto;
+  }
+  .logo {
+    right: 0;
+    top: 30%;
   }
   .aboutme {
     top: 33%;
@@ -333,6 +348,9 @@ html body {
   top: 1px;
 }
 @media (max-width: 666px) {
+  .playagames {
+    top: -25px;
+  }
   .discord--card__border {
     width: 100%;
     overflow: auto;

@@ -61,7 +61,22 @@ function getCaption() {
       captionElement.innerHTML = "";
     }
   } else {
-    captionElement.innerHTML = "dang nghe spotify";
+    if (
+      userData &&
+      userData.data &&
+      userData.data.activities &&
+      userData.data.activities.length > 0
+    ) {
+      const activity = userData.data.activities[0]; //lấy mảng activities
+      let customIcon = ""; // Khởi tạo biến customIcon rỗng
+      if (activity.emoji && activity.emoji.name) {
+        // Kiểm tra xem trường "name" trong đối tượng "emoji" có tồn tại hay không
+        customIcon = activity.emoji.name; // Gán giá trị cho biến customIcon nếu trường "name" tồn tại
+      }
+      captionElement.innerHTML = `${customIcon} ${activity.state}`;
+    } else {
+      captionElement.innerHTML = "";
+    }
   }
 }
 
