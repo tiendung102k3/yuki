@@ -1,3 +1,4 @@
+//©Coppyright by YukiDev (Đặng Hoàng Thiên Ân)
 const roleCode = document.querySelectorAll(".cir");
 const audio = document.querySelector(".audio");
 for (let i = 0; i < roleCode.length; i++) {
@@ -13,11 +14,11 @@ async function fetchData() {
     const response = await fetch(`https://api.lanyard.rest/v1/users/${proflieId}`);
     const data = await response.json();
     userData = data;
-    console.log("Dữ liệu đã được cập nhật:", userData);
     updateStatus();
     getAvtUser();
     getCaption();
     spotify();
+    getAName();
   } catch (error) {
     console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
   }
@@ -38,6 +39,17 @@ function spotify() {
     if (listeningtoSpotify) {
       listeningtoSpotify.style.display = "none";
     }
+  }
+}
+// hmaf get gobalname và display name
+function getAName() {
+  const tick = "./svg/icons8-blue-tick.svg";
+  const gobalName = document.querySelector("#gobalname");
+  const displayName = document.querySelector("#displayname");
+  if (userData && userData.data && userData.data.discord_user) {
+    const user = userData.data.discord_user;
+    gobalName.innerHTML = user.global_name;
+    displayName.innerHTML = user.display_name;
   }
 }
 //hàm get custom caption từ API //
@@ -110,6 +122,7 @@ function updateStatus() {
     statusElement.setAttribute("src", "./svg/offline.svg");
   }
 }
+//hàm lấy avt của user//
 function getAvtUser() {
   const userAvt = document.querySelector("#userAvt");
   userAvt.setAttribute(
@@ -118,6 +131,6 @@ function getAvtUser() {
   );
 }
 
+//cập nhật thông tin và giảm độ trễ của toàn bộ hệ thống //
 setInterval(fetchData, 3000);
-
 window.onload = fetchData();
