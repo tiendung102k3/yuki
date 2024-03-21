@@ -339,13 +339,23 @@ html body {
     left: 110px;
   }
 }
+#gobalname {
+  display: inline-block;
+  width: auto;
+}
+.user--name {
+  width: auto;
+  position: relative;
+  display: inline-block;
+}
+
 .verify {
-  position: absolute;
-  left: 100px;
+  display: inline-block;
+  position: relative;
   width: 25px;
+  bottom: -2px;
   height: 25px;
-  left: 90px;
-  top: 1px;
+  right: 0;
 }
 @media (max-width: 666px) {
   .playagames {
