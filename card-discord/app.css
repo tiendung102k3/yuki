@@ -55,9 +55,9 @@ html body {
   width: 100%;
   height: 25%;
   background-color: #f094c8;
-  /* background-image: url(../images/minimalist-forest-river-art-1-4k.jpg); */
+  background-image: url(https://i.pinimg.com/originals/6f/07/a8/6f07a875c5ebed5ec60187feeb2f7952.gif);
   overflow: hidden;
-  background-size: contain;
+  background-size: cover;
 }
 .inner .avatar {
   width: 150px;

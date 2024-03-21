@@ -26,7 +26,7 @@ async function fetchData() {
 // Hàm để cập nhật trạng thái dựa trên dữ liệu mới
 function updateStatus() {
   const statusElement = document.querySelector("#statusimg");
-  if (userData.data.active_on_discord_mobile === true) {
+  if (userData.data.active_on_discord_mobile == true) {
     console.log("on mobile");
     switch (userData.data.discord_status) {
       case "offline":
@@ -46,8 +46,8 @@ function updateStatus() {
         break;
     }
   } else if (
-    userData.data.active_on_discord_desktop === true ||
-    userData.data.active_on_discord_web === true
+    userData.data.active_on_discord_desktop == true ||
+    userData.data.active_on_discord_web == true
   ) {
     console.log("on pc");
     switch (userData.data.discord_status) {
