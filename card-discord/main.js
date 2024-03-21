@@ -9,7 +9,7 @@ for (let i = 0; i < roleCode.length; i++) {
 //thingkibng  cònig
 const thingKing = document.querySelector(".youThingKing");
 thingKing.innerHTML = "Đang bị bệnh Simp bạn Quỳnh";
-
+// discord sync
 const proflieId = "654675180529909789"; // dán proflieid của bạn  vô đây nha //
 let userData = null;
 async function fetchData() {
