@@ -109,6 +109,7 @@ function updateStatus() {
       online: "./svg/online.svg",
       idle: "./svg/idle.svg",
       dnd: "./svg/dnd.svg",
+      streming: "./svg/streaming.svg",
     },
   };
   if (userData.data.active_on_discord_mobile == true) {
