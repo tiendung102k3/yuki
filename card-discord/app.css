@@ -260,6 +260,8 @@ html body {
   transition: linear, 0.5s;
 }
 .playagems {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 900;
   width: 100%;
   height: auto;
   position: relative;

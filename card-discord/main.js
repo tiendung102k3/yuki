@@ -6,7 +6,7 @@ for (let i = 0; i < roleCode.length; i++) {
   console.log(`active${indexNum}`);
 }
 
-const proflieId = "738748102311280681"; // dán proflieid của bạn  vô đây nha //
+const proflieId = "654675180529909789"; // dán proflieid của bạn  vô đây nha //
 let userData = null;
 async function fetchData() {
   try {
@@ -17,8 +17,21 @@ async function fetchData() {
     updateStatus();
     getAvtUser();
     getCaption();
+    spotify();
   } catch (error) {
     console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
+  }
+}
+//hàm get  ablum spotify  //
+function spotify() {
+  const songImg = document.querySelector("#songimg");
+  const songName = document.querySelector("#songname");
+  const singer = document.querySelector("#singer");
+  if (userData && userData.data && userData.data.spotify) {
+    const spotify = userData.data.spotify;
+    songName.innerHTML = `${spotify.song}`;
+    songImg.setAttribute("src", `${spotify.album_art_url}`);
+    singer.innerHTML = `by ${spotify.artist}`;
   }
 }
 //hàm get custom caption từ API //
