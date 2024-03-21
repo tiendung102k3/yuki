@@ -6,6 +6,9 @@ for (let i = 0; i < roleCode.length; i++) {
   roleCode[i].classList.add(`active${indexNum}`);
   console.log(`active${indexNum}`);
 }
+//thingkibng  cònig
+const thingKing = document.querySelector(".youThingKing");
+thingKing.innerHTML = "Đang bị bệnh Simp bạn Quỳnh";
 
 const proflieId = "654675180529909789"; // dán proflieid của bạn  vô đây nha //
 let userData = null;
