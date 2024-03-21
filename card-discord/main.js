@@ -27,11 +27,17 @@ function spotify() {
   const songImg = document.querySelector("#songimg");
   const songName = document.querySelector("#songname");
   const singer = document.querySelector("#singer");
+  const listeningtoSpotify = document.querySelector(".playagames");
   if (userData && userData.data && userData.data.spotify) {
+    listeningtoSpotify.style.display = "block";
     const spotify = userData.data.spotify;
     songName.innerHTML = `${spotify.song}`;
     songImg.setAttribute("src", `${spotify.album_art_url}`);
     singer.innerHTML = `by ${spotify.artist}`;
+  } else {
+    if (listeningtoSpotify) {
+      listeningtoSpotify.style.display = "none";
+    }
   }
 }
 //hàm get custom caption từ API //
