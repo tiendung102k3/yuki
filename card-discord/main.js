@@ -119,11 +119,9 @@ function updateStatus() {
     userData.data.active_on_discord_desktop == true ||
     userData.data.active_on_discord_mobile == true
   ) {
-    console.log("on pc");
     statusElement.setAttribute("src", statusList.desktop[userData.data.discord_status]);
   } else {
-    console.log("on invisible");
-    statusElement.setAttribute("src", "./svg/offline.svg");
+    statusElement.setAttribute("src", "./svg/invisible.svg");
   }
 }
 //hàm lấy avt của user//
