@@ -9,25 +9,15 @@ for (let i = 0; i < roleCode.length; i++) {
 //thingkibng  config
 const thingKing = document.querySelector(".youThingKing");
 thingKing.innerHTML = "Xin chào mình là Yuki SE tại VNG ";
-// discord sync
-const proflieInput = prompt();
-const proflieDefaut = "654675180529909789";
 let userData = null;
+//công táo  truyền id
+
+const proflieDefaut = "654675180529909789";
+let response;
+// discord sync
 async function fetchData() {
-  let response;
   try {
-    if (proflieInput !== "") {
-      // Kiểm tra nếu proflieInput là một dãy số
-      if (!isNaN(proflieInput)) {
-        response = await fetch(`https://api.lanyard.rest/v1/users/${proflieInput}`);
-      } else {
-        // Nếu proflieInput không phải là một dãy số, sử dụng proflieDefaut
-        response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
-      }
-    } else {
-      // Nếu không có giá trị nhập vào, sử dụng proflieDefaut
-      response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
-    }
+    response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
     const data = await response.json();
     userData = data;
     updateStatus();
