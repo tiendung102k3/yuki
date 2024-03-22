@@ -271,14 +271,14 @@ html body {
 .playagames {
   font-family: "Public Sans", sans-serif;
   font-weight: 900;
-  width: 100%;
+  width: auto;
   height: auto;
   position: relative;
   top: 90px;
 }
 .gamectn {
   padding-top: 5px;
-  width: 100%;
+  width: auto;
   display: flex;
   height: auto;
   justify-content: flex-start;
@@ -290,8 +290,9 @@ html body {
   height: 70px;
 }
 .decripton {
+  position: relative;
   padding-left: 25px;
-  width: 300px;
+  width: auto;
   height: auto;
   color: black;
   display: flex;
@@ -301,9 +302,10 @@ html body {
 .logo {
   width: 30px;
   height: 30px;
+  right: 0;
+  transform: translateX(200%);
   position: absolute;
-  right: 200px;
-  top: 20px;
+  top: 0;
 }
 
 @media (max-width: 767px) {
@@ -319,6 +321,7 @@ html body {
   .logo {
     right: 0;
     top: 30%;
+    transform: translateX(100%);
   }
   .aboutme {
     top: 33%;
