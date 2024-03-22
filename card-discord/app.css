@@ -293,6 +293,7 @@ html body {
   padding-left: 25px;
   width: 300px;
   height: auto;
+  color: black;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -304,6 +305,7 @@ html body {
   right: 200px;
   top: 20px;
 }
+
 @media (max-width: 767px) {
   .playagames {
     position: relative;

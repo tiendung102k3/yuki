@@ -31,6 +31,7 @@ async function fetchData() {
 }
 //hàm get  ablum spotify  //
 function spotify() {
+  const songLink = document.querySelector(".songlink");
   const songImg = document.querySelector("#songimg");
   const songName = document.querySelector("#songname");
   const singer = document.querySelector("#singer");
@@ -41,6 +42,10 @@ function spotify() {
     songName.innerHTML = `${spotify.song}`;
     songImg.setAttribute("src", `${spotify.album_art_url}`);
     singer.innerHTML = `by ${spotify.artist}`;
+    songLink.setAttribute(
+      "href",
+      `https://open.spotify.com/track/${spotify.track_id}?utm_source=discord&utm_medium=desktop`
+    );
   } else {
     if (listeningtoSpotify) {
       listeningtoSpotify.style.display = "none";
