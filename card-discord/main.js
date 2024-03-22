@@ -35,6 +35,7 @@ function spotify() {
   const songImg = document.querySelector("#songimg");
   const songName = document.querySelector("#songname");
   const singer = document.querySelector("#singer");
+  const album = document.querySelector("#album");
   const listeningtoSpotify = document.querySelector(".playagames");
   if (userData && userData.data && userData.data.spotify) {
     listeningtoSpotify.style.display = "block";
@@ -46,6 +47,7 @@ function spotify() {
       "href",
       `https://open.spotify.com/track/${spotify.track_id}?utm_source=discord&utm_medium=desktop`
     );
+    album.innerHTML = `On ${spotify.album}`;
   } else {
     if (listeningtoSpotify) {
       listeningtoSpotify.style.display = "none";

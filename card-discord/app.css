@@ -213,9 +213,9 @@ html body {
   padding-right: 4px;
 }
 .contactme {
-  position: absolute;
+  position: relative;
   width: 100%;
-  bottom: 60px;
+  top: 100px;
   color: var(--theme-text);
 }
 .contactme h1 {
@@ -279,6 +279,13 @@ html body {
   position: relative;
   top: 90px;
 }
+.playagames:hover {
+  background-color: rgb(255, 0, 128);
+  transition: linear, 0.5s;
+}
+.spotify-title {
+  padding-bottom: 10px;
+}
 .gamectn {
   padding-top: 5px;
   width: auto;
@@ -303,6 +310,7 @@ html body {
   flex-direction: column;
 }
 .logo {
+  padding-bottom: 10px;
   width: 30px;
   height: 30px;
   right: 0;
