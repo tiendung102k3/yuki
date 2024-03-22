@@ -7,6 +7,9 @@ html body {
   font-family: "Madimi One";
   color: var(--theme-text);
 }
+::-webkit-scrollbar {
+  display: none;
+}
 :root {
   --pastel-gradient: linear-gradient(to top, #fdbccf, #d3c0f9);
   /* --pastel-gradient: transparent; */
