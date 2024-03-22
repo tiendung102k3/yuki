@@ -10,11 +10,17 @@ for (let i = 0; i < roleCode.length; i++) {
 const thingKing = document.querySelector(".youThingKing");
 thingKing.innerHTML = "Xin chào mình là Yuki SE tại VNG ";
 // discord sync
-const proflieId = "654675180529909789"; // dán proflieid của bạn  vô đây nha //
+const proflieInput = prompt();
+const proflieDefaut = "654675180529909789";
 let userData = null;
 async function fetchData() {
+  let response;
   try {
-    const response = await fetch(`https://api.lanyard.rest/v1/users/${proflieId}`);
+    if (proflieInput != "") {
+      response = await fetch(`https://api.lanyard.rest/v1/users/${proflieInput}`);
+    } else {
+      response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
+    }
     const data = await response.json();
     userData = data;
     updateStatus();
