@@ -145,7 +145,6 @@ function getAvtUser() {
     `https://cdn.discordapp.com/avatars/${userData.data.discord_user.id}/${userData.data.discord_user.avatar}?size=1024`
   );
 }
-
 //cập nhật thông tin và giảm độ trễ của toàn bộ hệ thống //
 setInterval(fetchData, 3000);
 window.onload = fetchData();
