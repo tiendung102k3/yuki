@@ -369,6 +369,7 @@ html body {
 @media (max-width: 666px) {
   .playagames {
     top: -25px;
+    position: relative;
   }
   .discord--card__border {
     width: 100%;
@@ -381,6 +382,7 @@ html body {
   }
   .contactme {
     bottom: 20px;
+    position: relative;
   }
   .contact--item {
     height: 25px;
