@@ -16,9 +16,16 @@ let userData = null;
 async function fetchData() {
   let response;
   try {
-    if (proflieInput != "") {
-      response = await fetch(`https://api.lanyard.rest/v1/users/${proflieInput}`);
+    if (proflieInput !== "") {
+      // Kiểm tra nếu proflieInput là một dãy số
+      if (!isNaN(proflieInput)) {
+        response = await fetch(`https://api.lanyard.rest/v1/users/${proflieInput}`);
+      } else {
+        // Nếu proflieInput không phải là một dãy số, sử dụng proflieDefaut
+        response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
+      }
     } else {
+      // Nếu không có giá trị nhập vào, sử dụng proflieDefaut
       response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
     }
     const data = await response.json();
