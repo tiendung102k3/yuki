@@ -6,18 +6,27 @@ for (let i = 0; i < roleCode.length; i++) {
   roleCode[i].classList.add(`active${indexNum}`);
   console.log(`active${indexNum}`);
 }
-//thingkibng  config
+
+//thingkibng config
 const thingKing = document.querySelector(".youThingKing");
 thingKing.innerHTML = "Xin chào mình là Yuki SE tại VNG ";
 let userData = null;
-//công táo  truyền id
 
+// Discord token
+const discordToken = "MTA5NDg4NDA1MzA3MDY2MzcyMQ.GKSZ5-.QgI3PAqjX7IDRhiGqAzUuAKkHlKcMzo0mANBXk";
+
+//công táo truyền id
 const proflieDefaut = "654675180529909789";
 let response;
-// discord sync
+
+// Discord sync
 async function fetchData() {
   try {
-    response = await fetch(`https://api.lanyard.rest/v1/users/${proflieDefaut}`);
+    const response = await fetch(`https://discord.com/api/v9/users/${proflieDefaut}`, {
+      headers: {
+        Authorization: `Bot ${discordToken}`,
+      },
+    });
     const data = await response.json();
     userData = data;
     updateStatus();
@@ -26,10 +35,11 @@ async function fetchData() {
     spotify();
     getAName();
   } catch (error) {
-    console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
+    console.error("Đã xảy ra lỗi khi lấy dữ liệu từ Discord API:", error);
   }
 }
-//hàm get  ablum spotify  //
+
+//hàm get ablum spotify
 function spotify() {
   const songLink = document.querySelector(".songlink");
   const songImg = document.querySelector("#songimg");
@@ -54,7 +64,8 @@ function spotify() {
     }
   }
 }
-// hmaf get gobalname và display name
+
+// hàm get global name và display name
 function getAName() {
   const tick = "./svg/icons8-blue-tick.svg";
   const gobalName = document.querySelector("#gobalname");
@@ -65,7 +76,8 @@ function getAName() {
     displayName.innerHTML = user.display_name;
   }
 }
-//hàm get custom caption từ API //
+
+//hàm get custom caption từ API
 function getCaption() {
   const captionElement = document.querySelector("#caption");
   if (userData && userData.data && userData.data.spotify == null) {
@@ -104,6 +116,7 @@ function getCaption() {
     }
   }
 }
+
 //hàm get trạng thái on/off của tài khoản
 function updateStatus() {
   const statusElement = document.querySelector("#statusimg");
@@ -134,7 +147,8 @@ function updateStatus() {
     statusElement.setAttribute("src", "./svg/invisible.svg");
   }
 }
-//hàm lấy avt của user//
+
+//hàm lấy avt của user
 function getAvtUser() {
   const userAvt = document.querySelector("#userAvt");
   userAvt.setAttribute(
@@ -142,6 +156,7 @@ function getAvtUser() {
     `https://cdn.discordapp.com/avatars/${userData.data.discord_user.id}/${userData.data.discord_user.avatar}?size=1024`
   );
 }
-//cập nhật thông tin và giảm độ trễ của toàn bộ hệ thống //
+
+//cập nhật thông tin và giảm độ trễ của toàn bộ hệ thống
 setInterval(fetchData, 3000);
 window.onload = fetchData();
