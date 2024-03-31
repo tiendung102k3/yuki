@@ -16,7 +16,7 @@ let userData = null;
 const discordToken = "MTA5NDg4NDA1MzA3MDY2MzcyMQ.GKSZ5-.QgI3PAqjX7IDRhiGqAzUuAKkHlKcMzo0mANBXk";
 
 //công táo truyền id
-const proflieDefaut = "654675180529909789";
+const proflieDefaut = "864205486977974283";
 let response;
 
 // Discord sync
