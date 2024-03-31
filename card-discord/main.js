@@ -13,7 +13,7 @@ thingKing.innerHTML = "Xin chào mình là Yuki SE tại VNG ";
 let userData = null;
 
 // Discord token
-const discordToken = "MTA5NDg4NDA1MzA3MDY2MzcyMQ.GKSZ5-.QgI3PAqjX7IDRhiGqAzUuAKkHlKcMzo0mANBXk";
+const discordToken = "MTA5NDg4NDA1MzA3MDY2MzcyMQ.GuacAP.kB4gSH9aMocCOLA9yaAJiYlKxZhtLyrqcgh7ts";
 
 //công táo truyền id
 const proflieDefaut = "864205486977974283";
